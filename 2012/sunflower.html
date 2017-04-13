@@ -1,0 +1,43 @@
+<!doctype html>
+<head>
+	<meta charset=utf8>
+	<title>dirtyh4x by #vev@efnet</title>
+	<style>* { color: white }</style>
+</head>
+<body style=background:black>
+<h1>dirtyh4x - Small HTML by #vev@efnet - works in latest Firefox and Chrome despite of dirty h4x</h1>
+<p>
+	Minified version (218b) <a href="sunflower.min.html">here</a>.<br/>
+</p>
+<h2>Compo info</h2>
+<ul>
+	<li>Rules and reference code found <a href="http://www.gathering.org/tg12/en/creative/competitions/small-html/">here</a></li>
+	<li>Sunflower model <a href="https://en.wikipedia.org/wiki/Fibonacci_number#In_nature">explained</a></li>
+</ul>
+<h2>Some of the tricks used with bytes saved</h2>
+<ul>
+	<li>Use byte order mark to set utf8 instead of meta charset (16 bytes)</li>
+	<li>JS code in onload= (10 bytes)</li>
+	<li>Skip all use of &quot; in html (9 bytes)</li>
+	<li>Fetch element by global js-variable set by id= (27 bytes)</li>
+	<li>Set m=Math (3*3-5 = 4 bytes)</li>
+	<li>Set font to "4 a" instead of "4px arial", but since we skip &quot; in onload we can't have space so replace with \r (5 bytes)</li>
+	<li>Set and update varibles right in the &quot;for (;;)&quot; to save having to use {} and some &quot;;&quot; (~3 bytes)</li>
+	<li>Count down to 0 in condition part so it autostops and we save condition check (3 bytes)</li>
+</ul>
+<p>
+	<strong>Credits:</strong> fisk, mathias, si-m1, terje_
+</p>
+<canvas id=a width=720 height=720></canvas>
+<script>
+d=document.getElementById("a");
+d=d.getContext('2d');
+d.fillStyle="#ff1493";
+for(n=0;n<256;n++){
+	a = 2.399963229728653 * n;
+	c = 7+n/(Math.PI*6);
+	r = c * Math.sqrt(n);
+	d.font=4+r/8+"px verdana";
+	d.fillText("♥",360+Math.cos(a)*r,360+Math.sin(a)*r);
+}
+</script>	
