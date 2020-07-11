@@ -1,0 +1,48 @@
+<!doctype html>
+<body>
+    <main>
+        <h1>Entries</h1>
+        <p>Not all of these might work in newer browers and def. not in all browsers</p>
+        <ul>
+            <li>
+                <a href="2012/sunflower.html">2012</a>
+            </li>
+            <li>
+                <a href="2013/html2013_minified.min.new.html">2013</a>
+            </li>
+            <li>
+                <a href="2014/starfield.html">2014</a>
+            </li>
+            <li>
+                <a href="2016/vevteori.html">2016</a>
+            </li>
+            <li>
+                <a href="2017/simeng/plazm.html">2017 (superslow unfinished)</a>
+            </li>
+        </ul>
+        <h4>Trix</h4>
+        <ul>
+            <li> Use byte order mark to set utf8 instead of meta charset (16 bytes)
+            <li> JS code in onload= (10 bytes)
+            <li> Skip all use of " in html (2 bytes)
+            <li> Fetch element by global js-variable set by id= (27 bytes)
+            <li> Set m=Math (&lt;num_uses - 1&gt;<li>3-2 bytes)
+            <li> Set font to "4 a" instead of "4px arial", but since we skip " in onload we can't have space so replace with \r (5 bytes)
+            <li> Set and update varibles right in the "for (;;)" to save having to use {} and some ";" (~3 bytes)
+            <li> Count down to 0 in condition part so it autostops and we save condition check (3 bytes)
+            <li> Make sure ending newline is killed (1 byte)
+            <li> Reuse any numeral value as many places as possible, possibly making subtle changes to the effect
+            <li> = has higher priority than +=, allow you to assign static base values and add in the same step
+            <li> use &lt;condition&gt;&amp;&amp;&lt;code&gt; instead of if ()
+            <li> setInterval takes a string
+            <li> Use approximate values to get away with fewer decimals
+            <li> Try to reuse any drawing function as a clearing function as well
+            <li> Use canvas and onclick to execute all code to avoid needing &lt;body&gt;-tag
+        </ul>
+    </main>
+    <footer>
+        <p>
+            <a href="https://github.com/simeng/smallhtml">Github</a>
+        </p>
+    </footer>
+</body>
