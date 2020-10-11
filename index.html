@@ -1,25 +1,46 @@
 <!doctype html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        nav div {
+            padding: .5em;
+            margin: .5em;
+            background: #333;
+            border-radius: .5em;
+        }
+        body {
+            background: black;
+        }
+        * {
+            color: white;
+        }
+    </style>
+</head>
 <body>
     <main>
         <h1>Entries</h1>
         <p>Not all of these might work in newer browers and def. not in all browsers</p>
-        <ul>
-            <li>
+        <nav>
+            <div>
                 <a href="2012/sunflower.html">2012</a>
-            </li>
-            <li>
+            </div>
+            <div>
                 <a href="2013/html2013_minified.min.new.html">2013</a>
-            </li>
-            <li>
+            </div>
+            <div>
                 <a href="2014/starfield.html">2014</a>
-            </li>
-            <li>
+            </div>
+            <div>
                 <a href="2016/vevteori.html">2016</a>
-            </li>
-            <li>
+            </div>
+            <div>
                 <a href="2017/simeng/plazm.html">2017 (superslow unfinished)</a>
-            </li>
-        </ul>
+            </div>
+        </nav>
         <h4>Trix</h4>
         <ul>
             <li> Use byte order mark to set utf8 instead of meta charset (16 bytes)
